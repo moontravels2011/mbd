@@ -108,6 +108,85 @@ footer{background:var(--navy);border-top:3px solid var(--royal);padding:2rem 5%;
 .footer-iata{display:flex;align-items:center;gap:0.5rem;background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.12);border-radius:4px;padding:0.4rem 0.9rem;}
 .footer-iata-badge{background:white;color:var(--navy);font-family:'Bebas Neue',sans-serif;font-size:0.75rem;padding:0.15rem 0.4rem;border-radius:3px;letter-spacing:0.1em;}
 .footer-iata span{font-size:0.72rem;color:rgba(255,255,255,0.55);font-family:'Barlow Condensed',sans-serif;font-weight:500;letter-spacing:0.05em;}
+
+/* ── RESPONSIVE: TABLET (max 1024px) ── */
+@media (max-width: 1024px) {
+  nav { padding: 0.85rem 4%; }
+  .nav-links { gap: 1rem; }
+  .hero { padding: 3.5rem 4% 3rem; }
+  .hero-grid { gap: 2.5rem; }
+  .hero h1 { font-size: 3.5rem; }
+  .stats-inner { grid-template-columns: repeat(4,1fr); gap: 1rem; }
+  .services-grid { grid-template-columns: repeat(2,1fr); }
+  .partners-grid { grid-template-columns: repeat(3,1fr); gap: 1rem; }
+  .partner-card img { height: 180px; }
+  .section-wrap { padding: 0 1rem; }
+}
+
+/* ── RESPONSIVE: MOBILE (max 768px) ── */
+@media (max-width: 768px) {
+  /* NAV */
+  nav { padding: 0.75rem 4%; flex-wrap: wrap; gap: 0.6rem; }
+  .nav-links { display: none; }
+  .iata-pill { display: none; }
+  .logo-name { font-size: 1.4rem; }
+  .logo-tagline { font-size: 0.55rem; }
+  .nav-cta { padding: 0.45rem 1rem; font-size: 0.8rem; }
+
+  /* HERO */
+  .hero { padding: 2.5rem 5% 2.5rem; }
+  .hero-grid { grid-template-columns: 1fr; gap: 2rem; }
+  .hero h1 { font-size: 3rem; }
+  .hero h1 .sub { font-size: 1.6rem; }
+  .hero-desc { font-size: 0.9rem; max-width: 100%; }
+  .btn-hero-main, .btn-hero-ghost { padding: 0.7rem 1.3rem; font-size: 0.9rem; }
+  .floating-badge { top: -10px; right: -6px; font-size: 0.72rem; padding: 0.3rem 0.7rem; }
+  .hero-photo-card img { height: 240px; }
+
+  /* STATS */
+  .stats-bar { padding: 1.25rem 5%; }
+  .stats-inner { grid-template-columns: repeat(2,1fr); gap: 1rem; }
+  .stat-num { font-size: 1.8rem; }
+  .stat-label { font-size: 0.68rem; }
+
+  /* UMRAH BANNER */
+  .umrah-banner-inner { flex-direction: column; gap: 0.75rem; text-align: center; }
+  .umrah-banner-title { font-size: 1.1rem !important; }
+
+  /* SERVICES */
+  .services { padding: 3rem 5%; }
+  .services-grid { grid-template-columns: 1fr; gap: 1rem; }
+  .section-heading { font-size: 2.2rem; margin-bottom: 1.75rem; }
+
+  /* PARTNERS */
+  .partners { padding: 3rem 5%; }
+  .partners-grid { grid-template-columns: 1fr; gap: 1.25rem; }
+  .partner-card img { height: 200px; object-position: top; }
+
+  /* LOCATIONS */
+  .locations { padding: 3rem 5%; }
+  .loc-grid { grid-template-columns: 1fr; }
+
+  /* CONTACT */
+  .contact { padding: 3rem 5%; }
+  .contact-cards { grid-template-columns: 1fr; gap: 1rem; }
+
+  /* FOOTER */
+  footer { padding: 1.5rem 5%; }
+  .footer-inner { flex-direction: column; align-items: flex-start; gap: 0.75rem; }
+  .footer-mid { text-align: left; }
+}
+
+/* ── RESPONSIVE: SMALL MOBILE (max 480px) ── */
+@media (max-width: 480px) {
+  .hero h1 { font-size: 2.4rem; }
+  .hero h1 .sub { font-size: 1.3rem; }
+  .hero-btns { flex-direction: column; }
+  .btn-hero-main, .btn-hero-ghost { text-align: center; }
+  .stats-inner { grid-template-columns: repeat(2,1fr); }
+  .logo-img { width: 40px; height: 40px; }
+  .logo-name { font-size: 1.2rem; }
+}
 </style>
 </head>
 <body>
@@ -172,12 +251,12 @@ footer{background:var(--navy);border-top:3px solid var(--royal);padding:2rem 5%;
 
 <div style="background:linear-gradient(135deg,#7B4F00 0%,#C8860A 50%,#7B4F00 100%);padding:1.25rem 5%;text-align:center;position:relative;overflow:hidden;">
   <div style="position:absolute;inset:0;background:url('data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%2260%22 height=%2260%22><text y=%2245%22 font-size=%2240%22>🕌</text></svg>') repeat;opacity:0.06;pointer-events:none;"></div>
-  <div style="max-width:1100px;margin:0 auto;display:flex;align-items:center;justify-content:center;gap:1.5rem;flex-wrap:wrap;position:relative;">
+  <div class="umrah-banner-inner" style="max-width:1100px;margin:0 auto;display:flex;align-items:center;justify-content:center;gap:1.5rem;flex-wrap:wrap;position:relative;">
     <div style="background:rgba(255,255,255,0.15);border:1.5px solid rgba(255,255,255,0.35);border-radius:5px;padding:0.35rem 0.9rem;">
       <span style="font-family:'Bebas Neue',sans-serif;font-size:0.85rem;letter-spacing:0.12em;color:white;">🏅 UMRAH LICENSE NO. 517</span>
     </div>
     <div>
-      <span style="font-family:'Bebas Neue',sans-serif;font-size:1.5rem;letter-spacing:0.04em;color:white;">🕌 UMRAH BOOKING NOW OPEN — DEPARTING 2ND WEEK OF JULY 2026</span>
+      <span class="umrah-banner-title" style="font-family:'Bebas Neue',sans-serif;font-size:1.5rem;letter-spacing:0.04em;color:white;">🕌 UMRAH BOOKING NOW OPEN — DEPARTING 2ND WEEK OF JULY 2026</span>
     </div>
     <a href="tel:01715095851" style="background:white;color:#7B4F00;font-family:'Barlow Condensed',sans-serif;font-size:0.85rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;padding:0.5rem 1.25rem;border-radius:5px;text-decoration:none;white-space:nowrap;">Book Now →</a>
   </div>
